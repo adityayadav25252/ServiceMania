@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-65V86V89R3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-65V86V89R3');
+    </script>
+    <link rel="icon" href="img/Logo.png">
+    <meta name="description" content="Find answers to common questions about Service Mania's professional services. Learn about booking, pricing, verification, and more.">
+    <meta name="author" content="Service Mania">
+    <title>FAQ - Service Mania</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/faq.css">
+</head>
+
+<body>
+    <!-- Navbar (Same as index.html) -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-container">
+                        <img src="img/Logo.png" alt="Service Mania Logo" class="logo-image">
+                        <span class="logo-text">Service<span class="logo-highlight">Mania</span></span>
+                    </div>
+                </div>
+
+                <div class="nav-menu">
+                    <nav class="nav-links">
+                        <a href="index.html#home">Home</a>
+                        <a href="index.html#services">Services</a>
+                        <a href="index.html#process">Process</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html" class="active">FAQ</a>
+                    </nav>
+
+                    <div class="nav-actions">
+                        <a href="BookService.html" class="btn primary">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FAQ Hero Section -->
+    <section class="faq-hero">
+        <div class="container">
+            <div class="faq-hero-content">
+                <h1><span class="highlight">Frequently Asked</span> Questions</h1>
+                <p class="faq-subtitle">Find quick answers to common questions about our services, booking process, and policies</p>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="faqSearch" placeholder="Search for questions or topics...">
+                        <button class="search-btn">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Main Content -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-container">
+                <!-- Left Side - FAQ Categories -->
+                <div class="faq-categories">
+                    <div class="category-card active" data-category="all">
+                        <div class="category-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>All Questions</h3>
+                        <p>Browse all frequently asked questions</p>
+                    </div>
+                    
+                    <div class="category-card" data-category="booking">
+                        <div class="category-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Booking & Services</h3>
+                        <p>Questions about booking process</p>
+                    </div>
+                    
+                    <div class="category-card" data-category="pricing">
+                        <div class="category-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <h3>Pricing & Payments</h3>
+                        <p>Costs and payment methods</p>
+                    </div>
+                    
+                    <div class="category-card" data-category="professionals">
+                        <div class="category-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3>Professionals</h3>
+                        <p>About our service providers</p>
+                    </div>
+                    
+                    <div class="category-card" data-category="safety">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Safety & Verification</h3>
+                        <p>Security and background checks</p>
+                    </div>
+                    
+                    <div class="category-card" data-category="support">
+                        <div class="category-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Support & Contact</h3>
+                        <p>How to get help and support</p>
+                    </div>
+                </div>
+
+                <!-- Right Side - FAQ Items -->
+                <div class="faq-items">
+                    <!-- Booking & Services Category -->
+                    <div class="faq-category-group" data-category="booking">
+                        <h2 class="faq-category-title">
+                            <i class="fas fa-calendar-check"></i> Booking & Services
+                        </h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How do I book a service?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Booking is simple! You can:</p>
+                                <ul>
+                                    <li>Visit our <a href="BookService.html">Book Service</a> page</li>
+                                    <li>Fill out the booking form with your requirements</li>
+                                    <li>We'll match you with verified professionals</li>
+                                    <li>Confirm booking via WhatsApp with service details</li>
+                                </ul>
+                                <p>The entire process typically takes 1-2 hours for confirmation.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What services do you offer?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer four premium services:</p>
+                                <ul>
+                                    <li><strong>Home Tutor & Teaching Services:</strong> Personalized educational support for all subjects and levels</li>
+                                    <li><strong>Fitness Trainer Services:</strong> Customized workout plans at home or gym</li>
+                                    <li><strong>Caretaker Services:</strong> Professional care for elderly, children, or special needs</li>
+                                    <li><strong>Physiotherapist Services:</strong> Home visit physiotherapy and rehabilitation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How quickly can I get a service?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Service availability varies:</p>
+                                <ul>
+                                    <li><strong>Immediate (Same Day):</strong> Available within 4-6 hours for urgent requirements</li>
+                                    <li><strong>Standard Booking:</strong> 12-24 hours advance notice recommended</li>
+                                    <li><strong>Regular/Scheduled:</strong> Weekly or monthly schedules can be arranged</li>
+                                </ul>
+                                <p>We recommend booking at least 24 hours in advance for guaranteed availability.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Can I book services for multiple days or weeks?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! We offer flexible booking options:</p>
+                                <ul>
+                                    <li><strong>Single Session:</strong> One-time service booking</li>
+                                    <li><strong>Weekly Packages:</strong> 3-5 sessions per week at discounted rates</li>
+                                    <li><strong>Monthly Packages:</strong> Regular scheduled services with best pricing</li>
+                                    <li><strong>Custom Plans:</strong> Tailored to your specific needs and schedule</li>
+                                </ul>
+                                <p>Contact us via WhatsApp for custom package details and pricing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing & Payments Category -->
+                    <div class="faq-category-group" data-category="pricing">
+                        <h2 class="faq-category-title">
+                            <i class="fas fa-rupee-sign"></i> Pricing & Payments
+                        </h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How much do your services cost?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Pricing depends on:</p>
+                                <ul>
+                                    <li><strong>Service Type:</strong> Each service has different base rates</li>
+                                    <li><strong>Duration:</strong> Per hour, per session, or package rates</li>
+                                    <li><strong>Professional Level:</strong> Certified vs. advanced specialists</li>
+                                    <li><strong>Location:</strong> Service area within the city</li>
+                                </ul>
+                                <p>Typical range: ₹500 - ₹2000 per session. Exact pricing is shared during WhatsApp confirmation.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What payment methods do you accept?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer multiple payment options:</p>
+                                <ul>
+                                    <li><strong>Cash:</strong> Direct payment to the professional after service</li>
+                                    <li><strong>UPI:</strong> Google Pay, PhonePe, PayTM</li>
+                                    <li><strong>Bank Transfer:</strong> NEFT/IMPS to our account</li>
+                                    <li><strong>Digital Wallets:</strong> Various payment apps</li>
+                                </ul>
+                                <p>Payments are typically made after service completion unless booking a package.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Are there any hidden charges?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No hidden charges! Our pricing is transparent:</p>
+                                <ul>
+                                    <li><strong>Service Fee:</strong> Clearly mentioned during booking</li>
+                                    <li><strong>Travel Cost:</strong> Included if within city limits (extra for outskirts)</li>
+                                    <li><strong>Materials/Equipment:</strong> Additional if required (will be informed)</li>
+                                    <li><strong>Taxes:</strong> GST as applicable</li>
+                                </ul>
+                                <p>All costs are communicated upfront before confirmation. No surprises!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Do you offer refunds?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our refund policy is customer-friendly:</p>
+                                <ul>
+                                    <li><strong>Full Refund:</strong> If service is cancelled 24 hours before scheduled time</li>
+                                    <li><strong>Partial Refund:</strong> 50% refund for cancellations within 24 hours</li>
+                                    <li><strong>No Refund:</strong> For no-shows or last-minute cancellations</li>
+                                    <li><strong>Service Issues:</strong> Full refund if professional doesn't meet agreed standards</li>
+                                </ul>
+                                <p>Refunds are processed within 5-7 working days to the original payment method.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professionals Category -->
+                    <div class="faq-category-group" data-category="professionals">
+                        <h2 class="faq-category-title">
+                            <i class="fas fa-user-check"></i> Professionals
+                        </h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How do you verify your professionals?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Every professional undergoes rigorous verification:</p>
+                                <ul>
+                                    <li><strong>Background Check:</strong> Police verification and address proof</li>
+                                    <li><strong>Certificate Verification:</strong> Educational and professional certificates</li>
+                                    <li><strong>Experience Validation:</strong> Previous employment verification</li>
+                                    <li><strong>Skill Assessment:</strong> Practical tests and interviews</li>
+                                    <li><strong>Reference Checks:</strong> Contacting previous clients/employers</li>
+                                </ul>
+                                <p>Only 30% of applicants pass our verification process.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Can I choose a specific professional?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! We offer three options:</p>
+                                <ul>
+                                    <li><strong>Auto-Assign:</strong> We match you with the best available professional</li>
+                                    <li><strong>Professional Selection:</strong> Browse profiles and choose your preferred professional</li>
+                                    <li><strong>Request Specific:</strong> If you want to continue with a professional you liked</li>
+                                </ul>
+                                <p>Professional profiles include photos, qualifications, experience, and client ratings.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What if I'm not satisfied with the professional?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Your satisfaction is guaranteed:</p>
+                                <ul>
+                                    <li><strong>Immediate Replacement:</strong> Request a different professional at no extra cost</li>
+                                    <li><strong>Quality Check:</strong> Our team will follow up to resolve issues</li>
+                                    <li><strong>Feedback System:</strong> Rate your experience to help us improve</li>
+                                    <li><strong>Escalation Support:</strong> Contact our support team for urgent issues</li>
+                                </ul>
+                                <p>We maintain a satisfaction rate of 98% across all services.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Safety & Verification Category -->
+                    <div class="faq-category-group" data-category="safety">
+                        <h2 class="faq-category-title">
+                            <i class="fas fa-shield-alt"></i> Safety & Verification
+                        </h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Are your professionals safe and reliable?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! Our safety measures include:</p>
+                                <ul>
+                                    <li><strong>Complete Background Verification:</strong> Police clearance mandatory</li>
+                                    <li><strong>ID Proof Verification:</strong> Aadhar card, PAN card verification</li>
+                                    <li><strong>Training:</strong> Professional ethics and conduct training</li>
+                                    <li><strong>Real-time Tracking:</strong> Service tracking and check-in system</li>
+                                    <li><strong>Emergency Support:</strong> 24/7 helpline for safety concerns</li>
+                                </ul>
+                                <p>All professionals wear ID badges and carry verification documents.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What COVID-19 safety measures do you follow?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We maintain strict COVID-19 protocols:</p>
+                                <ul>
+                                    <li><strong>Vaccination:</strong> All professionals fully vaccinated</li>
+                                    <li><strong>Daily Health Checks:</strong> Temperature monitoring and symptom screening</li>
+                                    <li><strong>Safety Gear:</strong> Masks, gloves, and sanitizers provided</li>
+                                    <li><strong>Sanitization:</strong> Regular sanitization of equipment</li>
+                                    <li><strong>Contactless Service:</strong> Options available where possible</li>
+                                </ul>
+                                <p>You can request additional safety measures during booking.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Is my personal information secure?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Your privacy is our priority:</p>
+                                <ul>
+                                    <li><strong>Data Encryption:</strong> SSL encryption for all data transmission</li>
+                                    <li><strong>Limited Access:</strong> Only essential personnel access your information</li>
+                                    <li><strong>Professional Confidentiality:</strong> Professionals sign confidentiality agreements</li>
+                                    <li><strong>Data Protection:</strong> Compliance with data protection regulations</li>
+                                    <li><strong>Secure Payments:</strong> Payment information is never stored</li>
+                                </ul>
+                                <p>We never share your personal information with third parties without consent.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support & Contact Category -->
+                    <div class="faq-category-group" data-category="support">
+                        <h2 class="faq-category-title">
+                            <i class="fas fa-headset"></i> Support & Contact
+                        </h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How can I contact customer support?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Multiple ways to reach us:</p>
+                                <ul>
+                                    <li><strong>WhatsApp:</strong> +91 8770753546 (Fastest response)</li>
+                                    <li><strong>Phone:</strong> +91 7225880469 (10 AM - 7 PM)</li>
+                                    <li><strong>Email:</strong> devcubetech@gmail.com</li>
+                                    <li><strong>Contact Form:</strong> On our <a href="contact.html">Contact page</a></li>
+                                    <li><strong>Social Media:</strong> Facebook, Instagram, Twitter</li>
+                                </ul>
+                                <p>Average response time: WhatsApp - 15 minutes, Email - 4 hours, Phone - Immediate during business hours.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What are your customer support hours?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our support team is available:</p>
+                                <ul>
+                                    <li><strong>Normal Hours:</strong> Monday to Saturday, 9:00 AM to 8:00 PM</li>
+                                    <li><strong>Extended Support:</strong> Sundays & Holidays, 10:00 AM to 6:00 PM</li>
+                                    <li><strong>Emergency Support:</strong> 24/7 for active service emergencies</li>
+                                    <li><strong>WhatsApp Support:</strong> 24/7 for urgent queries</li>
+                                </ul>
+                                <p>We respond to all queries within maximum 24 hours.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Can I provide feedback about a service?</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We highly value your feedback:</p>
+                                <ul>
+                                    <li><strong>Post-Service Survey:</strong> Sent via WhatsApp after service completion</li>
+                                    <li><strong>Rating System:</strong> Rate professionals from 1-5 stars</li>
+                                    <li><strong>Written Reviews:</strong> Detailed feedback about your experience</li>
+                                    <li><strong>Anonymous Feedback:</strong> Option available if preferred</li>
+                                    <li><strong>Follow-up Calls:</strong> Our team may call to gather detailed feedback</li>
+                                </ul>
+                                <p>Your feedback helps us improve services and maintain quality standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions Section -->
+    <section class="questions-section">
+        <div class="container">
+            <div class="questions-content">
+                <h2>Still Have Questions?</h2>
+                <p>Can't find the answer you're looking for? Our team is here to help!</p>
+                
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp Support</h3>
+                        <p>Get instant answers via WhatsApp</p>
+                        <a href="https://wa.me/918770753546" class="btn primary" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat Now
+                        </a>
+                    </div>
+                    
+                    <div class="contact-option">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>Speak directly with our team</p>
+                        <a href="tel:+918770753546" class="btn secondary">
+                            <i class="fas fa-phone-alt"></i> +91 8770753546
+                        </a>
+                    </div>
+                    
+                    <div class="contact-option">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>Send detailed queries via email</p>
+                        <a href="mailto:devcubetech@gmail.com" class="btn secondary">
+                            <i class="fas fa-envelope"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <!-- Left Column -->
+                <div class="footer-left">
+                    <h2 class="footer-logo">Service <span class="highlight">Mania</span></h2>
+                    <p class="footer-desc">
+                        Connecting you with premium professionals for all your service needs.
+                        Book seamlessly via WhatsApp for home tutor, fitness trainer, caretaker, and physiotherapist services.
+                    </p>
+
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 8770753546</p>
+                        <p><i class="fas fa-envelope"></i> devcubetech@gmail.com</p>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="footer-right">
+                    <h3>Contact Us</h3>
+                    <form class="footer-form" id="contactForm">
+                        <div class="form-row">
+                            <input type="text" id="contactName" placeholder="Full Name" required>
+                            <input type="email" id="contactEmail" placeholder="Email Address" required>
+                        </div>
+                        <input type="tel" id="contactPhone" placeholder="Phone Number" required>
+                        <textarea id="contactMessage" placeholder="Your Message" rows="4" required></textarea>
+                        <button type="submit" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> SEND MESSAGE VIA WHATSAPP
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> <a href="https://www.devcubetech.com/" target="_blank" class="devcube-link">DevCubeTech</a>. All rights reserved.</p>
+                <p class="footer-tagline">Premium service booking platform with verified professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/script.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>

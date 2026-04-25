@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-65V86V89R3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-65V86V89R3');
+    </script>
+    <link rel="icon" href="../img/Logo.png">
+    <meta name="description" content="Service Mania AI Chatbot - Get instant assistance with service bookings, information, and support.">
+    <meta name="author" content="Service Mania">
+    <title>Service Mania - Chatbot</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-container">
+                        <img src="../img/Logo.png" alt="Service Mania Logo" class="logo-image">
+                        <span class="logo-text">Service<span class="logo-highlight">Mania</span></span>
+                    </div>
+                </div>
+
+                <div class="nav-menu">
+                    <nav class="nav-links">
+                        <a href="../index.html">Home</a>
+                        <a href="../index.html#services">Services</a>
+                        <a href="../index.html#process">Process</a>
+                        <a href="../about.html">About</a>
+                        <a href="../contact.html">Contact</a>
+                        <a href="../faq.html">FAQ</a>
+                        <a href="chatbot.html" class="active">Chatbot</a>
+                    </nav>
+
+                    <div class="nav-actions">
+                        <a href="BookService.html" class="btn primary">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Chatbot Container -->
+    <section class="chatbot-container-section">
+        <div class="container">
+            <div class="chatbot-wrapper">
+                <!-- Chatbot Header -->
+                <div class="chatbot-header">
+                    <div class="chatbot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chatbot-info">
+                        <h3>Service Mania Assistant</h3>
+                        <p class="status"><span class="status-indicator"></span> Online • Ready to help</p>
+                    </div>
+                    <div class="chatbot-actions">
+                        <button class="chatbot-action-btn" id="clearChat" title="Clear Chat">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button class="chatbot-action-btn" id="minimizeChat" title="Minimize">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chat Messages Container -->
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Initial welcome message -->
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p class="message-text">Hello! 👋 I'm your Service Mania Assistant. I can help you with:</p>
+                            <div class="quick-options">
+                                <button class="quick-option" data-action="services">Explore Services</button>
+                                <button class="quick-option" data-action="booking">Book a Service</button>
+                                <button class="quick-option" data-action="contact">Contact Support</button>
+                                <button class="quick-option" data-action="pricing">Pricing Info</button>
+                            </div>
+                            <p class="message-text">Or simply type your question below!</p>
+                            <span class="message-time">Just now</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Questions Message (Added inside chatbox) -->
+                    <div class="message bot-message" id="quickQuestionsMessage">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p class="message-text"><i class="fas fa-lightbulb"></i> Quick questions you can ask:</p>
+                            <div class="suggestion-quick-questions">
+                                <button class="suggestion-btn" data-question="What services do you offer?">What services do you offer?</button>
+                                <button class="suggestion-btn" data-question="How to book a service?">How to book a service?</button>
+                                <button class="suggestion-btn" data-question="What are your prices?">What are your prices?</button>
+                                <button class="suggestion-btn" data-question="Contact customer support">Contact customer support</button>
+                                <button class="suggestion-btn" data-question="Are professionals verified?">Are professionals verified?</button>
+                                <button class="suggestion-btn" data-question="What are your working hours?">What are your working hours?</button>
+                                <button class="suggestion-btn" data-question="Can I reschedule?">Can I reschedule?</button>
+                                <button class="suggestion-btn" data-question="What payment methods do you accept?">What payment methods do you accept?</button>
+                            </div>
+                            <span class="message-time">Suggestions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Hidden by default) -->
+                <div class="contact-form-container" id="contactFormContainer">
+                    <div class="contact-form-header">
+                        <h4><i class="fas fa-headset"></i> Contact Support</h4>
+                        <p>Fill in your details and we'll connect you via WhatsApp</p>
+                    </div>
+                    <form id="chatbotContactForm">
+                        <div class="form-group">
+                            <input type="text" id="chatbotName" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="chatbotEmail" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="chatbotPhone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="chatbotMessage" placeholder="How can we help you?" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <select id="chatbotService" required>
+                                <option value="">Select a Service</option>
+                                <option value="home-tutor">Home Tutor Services</option>
+                                <option value="fitness-trainer">Fitness Trainer</option>
+                                <option value="caretaker">Caretaker Services</option>
+                                <option value="physiotherapist">Physiotherapist</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn secondary" id="cancelContact">Cancel</button>
+                            <button type="submit" class="btn primary">
+                                <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Chat Input Area -->
+                <div class="chat-input-area">
+                    <div class="input-wrapper">
+                        <input type="text" 
+                               id="chatInput" 
+                               placeholder="Type your message here..." 
+                               autocomplete="off">
+                        <div class="input-actions">
+                            <button class="input-action-btn" id="attachFile" title="Attach File">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <button class="input-action-btn" id="sendMessage" title="Send Message">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <!-- Left Column -->
+                <div class="footer-left">
+                    <h2 class="footer-logo">Service <span class="highlight">Mania</span></h2>
+                    <p class="footer-desc">
+                        Connecting you with premium professionals for all your service needs.
+                        Book seamlessly via WhatsApp for home tutor, fitness trainer, caretaker, and physiotherapist services.
+                    </p>
+
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 8770753546</p>
+                        <p><i class="fas fa-envelope"></i> devcubetech@gmail.com</p>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="footer-right">
+                    <h3>Contact Us</h3>
+                    <form class="footer-form" id="footerContactForm">
+                        <div class="form-row">
+                            <input type="text" id="footerName" placeholder="Full Name" required>
+                            <input type="email" id="footerEmail" placeholder="Email Address" required>
+                        </div>
+                        <input type="tel" id="footerPhone" placeholder="Phone Number" required>
+                        <textarea id="footerMessage" placeholder="Your Message" rows="4" required></textarea>
+                        <button type="submit" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> SEND MESSAGE VIA WHATSAPP
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> <a href="https://www.devcubetech.com/" target="_blank" class="devcube-link">DevCubeTech</a>. All rights reserved.</p>
+                <p class="footer-tagline">Premium service booking platform with verified professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="js/chatbot-messages.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png">
+    <meta name="description" content="Book premium services with Service Mania - Home tutoring, fitness training, caretaking, and physiotherapy with verified professionals.">
+    <meta name="author" content="Service Mania">
+    <title>Book Service | Service Mania</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bookservice.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-container">
+                        <img src="img/Logo.png" alt="Service Mania Logo" class="logo-image">
+                        <span class="logo-text">Service<span class="logo-highlight">Mania</span></span>
+                    </div>
+                </div>
+
+                <div class="nav-menu">
+                    <nav class="nav-links">
+                        <a href="index.html#home">Home</a>
+                        <a href="index.html#services">Services</a>
+                        <a href="index.html#process">Process</a>
+                        <a href="about.html">About</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a href="faq.html">FAQ</a>
+                    </nav>
+
+                    <div class="nav-actions">
+                        <a href="index.html#contact" class="btn primary">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Rest of the file remains the same -->
+    <!-- Booking Form Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-form-container">
+                    <div class="booking-form-card">
+                        <div class="form-header">
+                            <h3><i class="fas fa-calendar-plus"></i> Book Your Service</h3>
+                            <p>Fill in your details to book with verified professionals</p>
+                        </div>
+                        
+                        <form id="bookingForm" class="booking-form">
+                            <div class="form-row">
+                                <div class="form-group form-group-half">
+                                    <label for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                                </div>
+
+                                <div class="form-group form-group-half">
+                                    <label for="phoneNumber">Phone Number *</label>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="Enter your WhatsApp number">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="serviceType">Service Type *</label>
+                                <select id="serviceType" name="serviceType" required>
+                                    <option value="">Select Service</option>
+                                    <option value="Home Tutor & Teaching Services">Home Tutor & Teaching Services</option>
+                                    <option value="Fitness Trainer Services">Fitness Trainer Services</option>
+                                    <option value="Caretaker Services">Caretaker Services</option>
+                                    <option value="Physiotherapist Services">Physiotherapist Services</option>
+                                </select>
+                            </div>
+
+                            <!-- Service-specific fields container (initially hidden) -->
+                            <div id="serviceSpecificFieldsContainer" class="service-specific-container" style="display: none;">
+                                <h4 class="service-fields-title"><i class="fas fa-info-circle"></i> Service Specific Details</h4>
+                                
+                                <!-- Home Tutor Specific Fields -->
+                                <div id="tutorFields" class="service-specific-fields">
+                                    <div class="form-row">
+                                        <div class="form-group form-group-half">
+                                            <label for="classGrade">Class / Grade *</label>
+                                            <select id="classGrade" name="classGrade" disabled>
+                                                <option value="">Select Class/Grade</option>
+                                                <option value="Class 1-5">Class 1-5</option>
+                                                <option value="Class 6-8">Class 6-8</option>
+                                                <option value="Class 9-10">Class 9-10</option>
+                                                <option value="Class 11-12">Class 11-12</option>
+                                                <option value="College Level">College Level</option>
+                                                <option value="Competitive Exams">Competitive Exams</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group form-group-half">
+                                            <label for="subjects">Subjects</label>
+                                            <input type="text" id="subjects" name="subjects" disabled placeholder="e.g., Math, Science, English">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Fitness Trainer Specific Fields -->
+                                <div id="gymFields" class="service-specific-fields">
+                                    <div class="form-row">
+                                        <div class="form-group form-group-half">
+                                            <label for="fitnessGoal">Fitness Goal *</label>
+                                            <select id="fitnessGoal" name="fitnessGoal" disabled>
+                                                <option value="">Select Goal</option>
+                                                <option value="Weight Loss">Weight Loss</option>
+                                                <option value="Weight Gain">Weight Gain</option>
+                                                <option value="Muscle Building">Muscle Building</option>
+                                                <option value="General Fitness">General Fitness</option>
+                                                <option value="Body Toning">Body Toning</option>
+                                                <option value="Sports Specific">Sports Specific</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group form-group-half">
+                                            <label for="sessionType">Session Type</label>
+                                            <select id="sessionType" name="sessionType" disabled>
+                                                <option value="">Select Type</option>
+                                                <option value="One-on-One">One-on-One</option>
+                                                <option value="Group Session">Group Session</option>
+                                                <option value="Couple Session">Couple Session</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Caretaker Specific Fields -->
+                                <div id="caretakerFields" class="service-specific-fields">
+                                    <div class="form-row">
+                                        <div class="form-group form-group-half">
+                                            <label for="careType">Type of Care *</label>
+                                            <select id="careType" name="careType" disabled>
+                                                <option value="">Select Care Type</option>
+                                                <option value="Elderly Care">Elderly Care</option>
+                                                <option value="Child Care">Child Care</option>
+                                                <option value="Patient Care">Patient Care</option>
+                                                <option value="Post-Surgery Care">Post-Surgery Care</option>
+                                                <option value="General Assistance">General Assistance</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group form-group-half">
+                                            <label for="shiftDuration">Shift Duration</label>
+                                            <select id="shiftDuration" name="shiftDuration" disabled>
+                                                <option value="">Select Duration</option>
+                                                <option value="4 hours">4 hours</option>
+                                                <option value="8 hours">8 hours</option>
+                                                <option value="12 hours">12 hours</option>
+                                                <option value="24 hours">24 hours</option>
+                                                <option value="Live-in">Live-in</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Physiotherapist Specific Fields -->
+                                <div id="physioFields" class="service-specific-fields">
+                                    <div class="form-row">
+                                        <div class="form-group form-group-half">
+                                            <label for="therapyType">Type of Therapy *</label>
+                                            <select id="therapyType" name="therapyType" disabled>
+                                                <option value="">Select Therapy Type</option>
+                                                <option value="Pain Management">Pain Management</option>
+                                                <option value="Post-Surgery Rehabilitation">Post-Surgery Rehabilitation</option>
+                                                <option value="Sports Injury Recovery">Sports Injury Recovery</option>
+                                                <option value="Geriatric Care">Geriatric Care</option>
+                                                <option value="Neurological Rehabilitation">Neurological Rehabilitation</option>
+                                                <option value="Orthopedic Rehabilitation">Orthopedic Rehabilitation</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group form-group-half">
+                                            <label for="condition">Medical Condition</label>
+                                            <input type="text" id="condition" name="condition" disabled placeholder="e.g., Back pain, Knee injury">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group form-group-half">
+                                    <label for="city">City / Location *</label>
+                                    <input type="text" id="city" name="city" required placeholder="Enter your city">
+                                </div>
+
+                                <div class="form-group form-group-half">
+                                    <label for="preferredTime">Preferred Time</label>
+                                    <select id="preferredTime" name="preferredTime">
+                                        <option value="">Select time</option>
+                                        <option value="Morning (6 AM - 12 PM)">Morning (6 AM - 12 PM)</option>
+                                        <option value="Afternoon (12 PM - 4 PM)">Afternoon (12 PM - 4 PM)</option>
+                                        <option value="Evening (4 PM - 8 PM)">Evening (4 PM - 8 PM)</option>
+                                        <option value="Night (8 PM - 10 PM)">Night (8 PM - 10 PM)</option>
+                                        <option value="Flexible">Flexible</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="additionalNotes">Additional Notes (Optional)</label>
+                                <textarea id="additionalNotes" name="additionalNotes" rows="3" placeholder="Any specific requirements, age group, special needs, etc..."></textarea>
+                            </div>
+
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-submit">
+                                    <i class="fab fa-whatsapp"></i> Send Booking via WhatsApp
+                                </button>
+                                <p class="form-note">You'll be redirected to WhatsApp to confirm your booking</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <!-- Left Column -->
+                <div class="footer-left">
+                    <h2 class="footer-logo">Service <span class="highlight">Mania</span></h2>
+                    <p class="footer-desc">
+                        Connecting you with premium professionals for all your service needs.
+                        Book seamlessly via WhatsApp for home tutor, fitness trainer, caretaker, and physiotherapist services.
+                    </p>
+
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 8770753546</p>
+                        <p><i class="fas fa-envelope"></i> devcubetech@gmail.com</p>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="footer-right">
+                    <h3>Contact Us</h3>
+                    <form class="footer-form" id="contactForm">
+                        <div class="form-row">
+                            <input type="text" id="contactName" placeholder="Full Name" required>
+                            <input type="email" id="contactEmail" placeholder="Email Address" required>
+                        </div>
+                        <input type="tel" id="contactPhone" placeholder="Phone Number" required>
+                        <textarea id="contactMessage" placeholder="Your Message" rows="4" required></textarea>
+                        <button type="submit" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> SEND MESSAGE VIA WHATSAPP
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> <a href="https://www.devcubetech.com/" target="_blank" class="devcube-link">DevCubeTech</a>. All rights reserved.</p>
+                <p class="footer-tagline">Premium service booking platform with verified professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/bookservice.js"></script>
+</body>
+
+</html>
